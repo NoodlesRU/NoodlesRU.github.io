@@ -1,62 +1,83 @@
-/* Reset some default browser styles */
-* {
-    margin: 3;
-    padding: 3;
-    box-sizing: border-box;
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
 }
 
-/* Basic page styles */
-body {
-    font-family: Times, Times, serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #000000;
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Header styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
 }
 
-header h1 {
-    margin-bottom: 10px;
+/* Custom hover effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Navigation styles */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-nav ul li {
-    margin: 0 15px;
+/* Custom gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+/* Mobile menu transition */
+.mobile-menu {
+    transition: all 0.3s ease-in-out;
 }
 
-/* Main content styles */
-main {
-    padding: 20px;
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
 }
 
-section {
-    margin-bottom: 20px;
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Additional responsive utilities */
+@media (max-width: 768px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .desktop-hidden {
+        display: none;
+    }
 }

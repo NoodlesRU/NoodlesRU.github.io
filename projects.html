@@ -3,34 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>My Projects</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>My Projects</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> <!-- Links to Home -->
-                <li><a href="about.html">About Me</a></li> <!-- Links to About Me -->
-                <li><a href="projects.html">Projects</a></li> <!-- Links to Projects -->
-                <li><a href="contact.html">Contact</a></li> <!-- Links to Contact -->
-                <li><a href="ZacheryWheeler.pdf">Resume</a></li> <!-- Links to Resume -->
-            </ul>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-gray-900">Zachery Wheeler</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Me</a>
+                        <a href="projects.html" class="bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="contact.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        <a href="ZacheryWheeler.pdf" class="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" target="_blank">Resume</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="md:hidden hidden mobile-menu" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 border-t">
+                    <a href="index.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About Me</a>
+                    <a href="projects.html" class="bg-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                    <a href="contact.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                    <a href="ZacheryWheeler.pdf" class="bg-green-500 hover:bg-green-600 text-white block px-3 py-2 rounded-md text-base font-medium" target="_blank">Resume</a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>My Projects</h2>
-            <p>One minute news summary</p>
-            <p>Quick Drug Finder</p>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg shadow-xl mb-12 overflow-hidden">
+            <div class="px-6 py-12 sm:px-12 sm:py-16 lg:px-16 lg:py-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                        My Projects
+                    </h2>
+                    <p class="text-lg sm:text-xl lg:text-2xl mb-6 opacity-90">
+                        Explore my latest work
+                    </p>
+                </div>
+            </div>
+        </section>
 
+        <!-- Projects Grid -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">One Minute News Summary</h3>
+                        <p class="text-gray-600 mb-4">
+                            A mobile application that provides concise, one-minute summaries of current news articles. 
+                            Uses natural language processing to extract key information and present it in an easily digestible format.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">React Native</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">GEMINI</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">NewsAPI</span>
+                        </div>
+                        <!-- Action Buttons to show demo and code for future updates -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                                View Demo
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Quick Drug Finder</h3>
+                        <p class="text-gray-600 mb-4">
+                            A mobile application designed to help users quickly find information about medications, 
+                            including dosages, side effects, and interactions. Features a clean, intuitive interface for easy navigation.
+                            Was done with a team in a hackathon.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Android Studio</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Healthcare API</span>
+                        </div>
+                        <!-- Action Buttons to show demo and code for future updates -->
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                                View Demo
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon Projects -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Coming Soon</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-600 text-center mb-8">
+                    I'm constantly working on new projects. 
+                    Check back soon to see what I'm building next.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">Mobile App</h3>
+                        <p class="text-sm text-gray-600">React Native project</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">Data Visualization</h3>
+                        <p class="text-sm text-gray-600">Interactive dashboard</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">AI Integration</h3>
+                        <p class="text-sm text-gray-600">Machine learning app</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Zachery Wheeler</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <p class="text-gray-300">2026 Zachery Wheeler</p>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <a href="https://www.linkedin.com/in/zachery-wheeler" target="_blank" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                    <a href="https://github.com/NoodlesRU" target="_blank" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+                    <a href="mailto:zachery.wheeler@email.com" class="text-gray-400 hover:text-white transition-colors">Email</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

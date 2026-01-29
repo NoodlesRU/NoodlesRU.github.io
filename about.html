@@ -5,31 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>About Me</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> <!-- Links to Home -->
-                <li><a href="about.html">About Me</a></li> <!-- Links to About Me -->
-                <li><a href="projects.html">Projects</a></li> <!-- Links to Projects -->
-                <li><a href="contact.html">Contact</a></li> <!-- Links to Contact -->
-                <li><a href="ZacheryWheeler.pdf">Resume</a></li> <!-- Links to Resume -->
-            </ul>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-gray-900">Zachery Wheeler</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+                        <a href="projects.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="contact.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        <a href="ZacheryWheeler.pdf" class="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" target="_blank">Resume</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
             
+            <!-- Mobile Navigation Menu -->
+            <div class="md:hidden hidden mobile-menu" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 border-t">
+                    <a href="index.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="about.html" class="bg-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium">About Me</a>
+                    <a href="projects.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                    <a href="contact.html" class="text-gray-700 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                    <a href="ZacheryWheeler.pdf" class="bg-green-500 hover:bg-green-600 text-white block px-3 py-2 rounded-md text-base font-medium" target="_blank">Resume</a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>I'm an ECU Software Engineering student</p>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section with Profile -->
+        <section class="bg-gradient-to-r from-blue-900 to-blue-600 text-white rounded-lg shadow-xl mb-12 overflow-hidden">
+            <div class="px-6 py-12 sm:px-12 sm:py-16 lg:px-16 lg:py-20">
+                <div class="flex flex-col lg:flex-row items-center max-w-6xl">
+                    <!-- Profile Image -->
+                    <div class="flex-shrink-0 mb-8 lg:mb-0 lg:mr-12">
+                        <img src="C:\Users\zacka\Code\PersonalWebsite\NoodlesRU.github.io\20260129_164015.jpg" 
+                             alt="Zachery Wheeler Profile Photo" 
+                             class="w-40 h-40 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full border-4 border-white shadow-2xl object-cover">
+                    </div>
+                    
+                    <!-- Hero Content -->
+                    <div class="flex-1 text-center lg:text-left">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                            About Me
+                        </h2>
+                        <p class="text-lg sm:text-xl lg:text-2xl mb-6 opacity-90">
+                            Senior Software Engineering Student at East Carolina University
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="projects.html" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center">
+                                View My Projects
+                            </a>
+                            <a href="contact.html" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold transition-colors text-center">
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Bio Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">My Story</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Hello! I'm Zachery Wheeler, a Senior Software Engineering Student at East Carolina University. 
+                    My passion for technology and problem-solving has driven me to pursue a career in software development, 
+                    where I can combine creativity with technical skills to build meaningful solutions.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    My journey in learning mobile and web development has led me to learn HTML, CSS, JavaScript, and various 
+                    frameworks including React/React Native and Node.js. I enjoy learning new technologies and applying them 
+                    to real-world projects that can make a difference in people's lives.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills & Technologies Section -->
+        <section class="bg-gray-50 rounded-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Skills & Technologies</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-blue-800 mb-3 text-xl">Frontend Development</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• HTML5 & CSS3</li>
+                            <li>• JavaScript (ES6+)</li>
+                            <li>• React & React Native</li>
+                            <li>• Tailwind CSS</li>
+                            <li>• Responsive Design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4l4 4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-green-800 mb-3 text-xl">Backend Development</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Node.js</li>
+                            <li>• Python</li>
+                            <li>• RESTful APIs</li>
+                            <li>• Database Management</li>
+                            <li>• Server Architecture</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-purple-800 mb-3 text-xl">Tools & Technologies</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Git & GitHub</li>
+                            <li>• VS Code</li>
+                            <li>• Figma</li>
+                            <li>• Agile Methodologies</li>
+                            <li>• Testing & Debugging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Goals Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Education</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold text-lg text-gray-800">Bachelor's in Software Engineering</h4>
+                                <p class="text-gray-600">East Carolina University</p>
+                                <p class="text-sm text-gray-500">Expected Graduation: 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Career Goals</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            I'm passionate about creating innovative software solutions that solve real-world problems. 
+                            My goal is to work with meaningful projects while continuing to grow my skills in emerging 
+                            technologies like AI, cloud computing, and mobile development.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Zachery Wheeler</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <p class="text-gray-300">2026 Zachery Wheeler</p>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <a href="https://www.linkedin.com/in/zachery-wheeler-176a91334" target="_blank" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                    <a href="https://github.com/NoodlesRU" target="_blank" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+                    <a href="mailto:zachery.wheeler9@email.com" class="text-gray-400 hover:text-white transition-colors">Email</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
