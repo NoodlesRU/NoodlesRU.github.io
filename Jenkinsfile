@@ -17,14 +17,32 @@ pipeline {
 
                 container('gcloud-builder') {
                     sh '''
-                        echo "Authenticating Docker with Artifact Registry..."
-                        gcloud auth configure-docker us-east1-docker.pkg.dev --quiet
+                        echo "Creating Artifact Registry authentication..."
+
+                        ACCESS_TOKEN=$(gcloud auth print-access-token)
+
+                        AUTH=$(printf 'oauth2accesstoken:%s' "$ACCESS_TOKEN" | base64 -w 0)
+
+                        mkdir -p /kaniko/.docker
+
+                        cat > /kaniko/.docker/config.json <<EOF
+{
+  "auths": {
+    "https://us-east1-docker.pkg.dev": {
+      "auth": "$AUTH"
+    }
+  }
+}
+EOF
+
+                        echo "Artifact Registry authentication configured."
                     '''
                 }
 
                 container('kaniko') {
                     sh '''
                         echo "Building and pushing portfolio image..."
+
                         /kaniko/executor \
                           --context "${WORKSPACE}" \
                           --dockerfile "${WORKSPACE}/Dockerfile" \
@@ -47,6 +65,7 @@ pipeline {
                         kubectl apply -f k8s/service.yaml
 
                         echo "Waiting for deployment..."
+
                         kubectl rollout status \
                           deployment/portfolio-app \
                           -n portfolio \
